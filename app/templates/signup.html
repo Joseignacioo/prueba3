@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="home.html"><h5>PRUEBA NUMERO 3</h5></a>
+        </div>
+    </header>
+    <!-- END ENCABEZADO -->
+    <div class="publicidad">
+        <h3>DETECTAR VULNERABILIDADES</h3>
+    </div>
+    <!-- main  -->
+    <main>
+        <div class="card">
+            <div class="title-card">
+                <h4>Crear Cuenta</h4>
+            </div>
+            <div class="body-card">
+                <form action="" method="post">
+                    {% csrf_token %}
+                    {{form.as_p}}
+                    <button>
+                        signup
+                    </button>
+                </form>
+                <p style="color: brown;">{{error}}</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
